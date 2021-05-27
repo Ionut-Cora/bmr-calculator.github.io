@@ -1,0 +1,155 @@
+@import './resets';
+@import './variables';
+@import './mixins';
+
+
+
+#root {
+    @include flexCenter;
+    min-height: 100vh;
+    position: relative;
+
+    #all-content {
+
+        @include flexCenter;
+        flex-direction: row;
+        justify-content: space-around;
+        min-width: 80%;
+
+
+        #all-card {
+            background-color: $primary-color;
+            min-height: 50vh;
+            min-width: 25vw;
+            padding: 1rem;
+            border-radius: 5px;
+            margin: 2rem;
+            @include flexCenter;
+            
+            h1 {
+                font-size: 1.5rem;
+                margin: 1rem;
+            }
+        
+            form {
+                @include flexCenter;
+                width: 100%;
+    
+                input {
+                    width: 50%;
+                    height: 2rem;
+                    border-radius: 5px;
+                    border: 0;
+                    margin: 0.5rem;
+                    padding-left: 5px;
+                    color: $third-color;
+                    font-size: 1rem;
+
+                    &:hover {
+                        background-color: darken($secondary-color, 5%);
+                    }
+                }
+    
+                select {
+                    @extend input;
+                }
+    
+                #submit {
+                    padding-left: 0;
+                    background-color: $fourth-color;
+                    font-weight: bold;
+                    text-transform: uppercase;
+
+                    &:hover {
+                        background: darken($fourth-color, 18%);
+                        cursor: pointer;
+                    }
+                }
+
+                .weight-message,
+                .height-message,
+                .age-message {
+                    display: none;
+                    color: $error-color;
+                }
+            }
+
+            #result {
+
+                @include flexCenter;
+                margin: 1.5rem 0;
+                background-color: $secondary-color;
+                border-radius: 5px;
+                width: 75%;
+                padding: 1rem;
+
+                #bmr-card {
+                    @include flexCenter;
+                    justify-content: flex-start;
+                    flex-direction: row;
+                    font-size: 1.1rem;
+    
+                    span {
+                        font-weight: bold;
+                        margin-left: 0.5rem;
+                        margin-right: 0.2rem;
+                    }
+                }
+            
+                #activity-card {
+                    @extend #bmr-card;
+    
+                    span {
+                        font-weight: bold;
+                    }
+                }
+
+            }
+        
+
+            @include mobile {
+                margin: 2rem;
+                min-width: 75vw;
+            }
+    
+        }
+
+        #info {
+            min-height: 50vh;
+            margin: 2rem;
+            @include flexCenter;
+
+            h2 {
+                text-align: center;
+                margin: 1.5rem 0;
+            }
+
+            h3 {
+                margin: 0.5rem 0;
+            }
+
+            span {
+                font-weight: bold;
+            }
+
+            @include mobile {
+                margin: 2rem;
+            }
+        }
+
+        @include mobile {
+            flex-direction: column;
+            padding-bottom: 3rem;
+        }
+
+    }
+
+    
+    footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 2.5rem;
+        text-align: center;
+    }
+}
