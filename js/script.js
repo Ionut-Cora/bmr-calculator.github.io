@@ -43,28 +43,7 @@ window.addEventListener('load', () => {
                         <div id="activity-div"></div>      
                     </div>                    
                 </div>
-            </div>
-
-            <div id="info">
-                <h2>BMR - Basal Metabolic Rate</h2>    
-                <div>
-                    <h3>BMR for men calculation</h3>
-                    <p>BMR (kcal/day) = 10 * weight(kg) + 6.25 * height(cm) - 5 * age(years) + 5(kcal/day)</p>
-                    <h3>BMR for women calculation</h3>
-                    <p>BMR (kcal/day) = 10 * weight(kg) + 6.25 * height(cm) - 5 * age(years) - 161(kcal/day)</p>           
-                </div>
-
-                <div>
-                    <h2>Harris Benedict Formula (Harris Benedict Equation)</h2>
-                    <ul>
-                        <li><span>Little/no exercise:</span> BMR * 1.2 = Total Calorie Need</li>
-                        <li><span>Light exercise:</span> BMR * 1.375 = Total Calorie Need</li>
-                        <li><span>Moderate exercise (3-5 days/week):</span> BMR * 1.55 = Total Calorie Need</li>
-                        <li><span>Very active (6-7 days/week):</span> BMR * 1.725 = Total Calorie Need</li>
-                        <li><span>Extra active (very active & physical job):</span> BMR * 1.9 = Total Calorie Need</li>
-                    </ul>              
-                </div>
-            </div>      
+            </div>     
         </div>
 
         <footer>
@@ -92,7 +71,6 @@ window.addEventListener('load', () => {
 
             for (let i = 0; i < genders.length; i++) {
                 let gender = genders[i];
-                // console.log(gender);
     
                 if (gender.selected === true) {
                     if (gender.value === 'Men') {

@@ -2,8 +2,6 @@
 @import './variables';
 @import './mixins';
 
-
-
 #root {
     @include flexCenter;
     min-height: 100vh;
@@ -22,7 +20,6 @@
             min-height: 50vh;
             min-width: 25vw;
             padding: 1rem;
-            border-radius: 5px;
             margin: 2rem;
             @include flexCenter;
             
@@ -38,7 +35,6 @@
                 input {
                     width: 50%;
                     height: 2rem;
-                    border-radius: 5px;
                     border: 0;
                     margin: 0.5rem;
                     padding-left: 5px;
@@ -79,7 +75,6 @@
                 @include flexCenter;
                 margin: 1.5rem 0;
                 background-color: $secondary-color;
-                border-radius: 5px;
                 width: 75%;
                 padding: 1rem;
 
@@ -112,29 +107,6 @@
                 min-width: 75vw;
             }
     
-        }
-
-        #info {
-            min-height: 50vh;
-            margin: 2rem;
-            @include flexCenter;
-
-            h2 {
-                text-align: center;
-                margin: 1.5rem 0;
-            }
-
-            h3 {
-                margin: 0.5rem 0;
-            }
-
-            span {
-                font-weight: bold;
-            }
-
-            @include mobile {
-                margin: 2rem;
-            }
         }
 
         @include mobile {
