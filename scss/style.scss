@@ -6,6 +6,7 @@
     @include flexCenter;
     min-height: 100vh;
     position: relative;
+    background-image: url(/images/bmr.jpg);
 
     #all-content {
 
@@ -13,12 +14,12 @@
         flex-direction: row;
         justify-content: space-around;
         min-width: 80%;
-
+        
 
         #all-card {
             background-color: $primary-color;
             min-height: 50vh;
-            min-width: 25vw;
+            min-width: 50vw;
             padding: 1rem;
             margin: 2rem;
             @include flexCenter;
@@ -44,6 +45,10 @@
                     &:hover {
                         background-color: darken($secondary-color, 5%);
                     }
+
+                    @include mobile {
+                        min-width: 50vw;
+                    }
                 }
     
                 select {
@@ -55,11 +60,19 @@
                     background-color: $fourth-color;
                     font-weight: bold;
                     text-transform: uppercase;
+                    width: 10rem;
+                    height: 3rem;
 
                     &:hover {
-                        background: darken($fourth-color, 18%);
+                        background: darken($fourth-color, 3%);
                         cursor: pointer;
                     }
+
+                    @include mobile {
+                        min-width: 10rem;
+                        height: 3rem;
+                    }
+
                 }
 
                 .weight-message,
@@ -75,7 +88,7 @@
                 @include flexCenter;
                 margin: 1.5rem 0;
                 background-color: $secondary-color;
-                width: 75%;
+                width: 50%;
                 padding: 1rem;
 
                 #bmr-card {
@@ -97,6 +110,10 @@
                     span {
                         font-weight: bold;
                     }
+                }
+
+                @include mobile {
+                    min-width: 50vw;
                 }
 
             }

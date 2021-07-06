@@ -21,6 +21,7 @@
           align-items: center;
   min-height: 100vh;
   position: relative;
+  background-image: url(/images/bmr.jpg);
 }
 
 #root #all-content {
@@ -45,9 +46,9 @@
 }
 
 #root #all-content #all-card {
-  background-color: #33ccff;
+  background-color: rgba(142, 202, 230, 0.705);
   min-height: 50vh;
-  min-width: 25vw;
+  min-width: 50vw;
   padding: 1rem;
   margin: 2rem;
   display: -webkit-box;
@@ -101,16 +102,31 @@
   background-color: #f2f2f2;
 }
 
+@media (max-width: 1050px) {
+  #root #all-content #all-card form input, #root #all-content #all-card form select {
+    min-width: 50vw;
+  }
+}
+
 #root #all-content #all-card form #submit {
   padding-left: 0;
-  background-color: #ffff4d;
+  background-color: #ffb603;
   font-weight: bold;
   text-transform: uppercase;
+  width: 10rem;
+  height: 3rem;
 }
 
 #root #all-content #all-card form #submit:hover {
-  background: #f0f000;
+  background: #f3ac00;
   cursor: pointer;
+}
+
+@media (max-width: 1050px) {
+  #root #all-content #all-card form #submit {
+    min-width: 10rem;
+    height: 3rem;
+  }
 }
 
 #root #all-content #all-card form .weight-message,
@@ -136,7 +152,7 @@
           align-items: center;
   margin: 1.5rem 0;
   background-color: #fff;
-  width: 75%;
+  width: 50%;
   padding: 1rem;
 }
 
@@ -170,6 +186,12 @@
 
 #root #all-content #all-card #result #activity-card span {
   font-weight: bold;
+}
+
+@media (max-width: 1050px) {
+  #root #all-content #all-card #result {
+    min-width: 50vw;
+  }
 }
 
 @media (max-width: 1050px) {
