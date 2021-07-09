@@ -21,7 +21,7 @@
           align-items: center;
   min-height: 100vh;
   position: relative;
-  background-image: url(/images/bmr.jpg);
+  background-image: url(../images/bmr.jpg);
 }
 
 #root #all-content {
