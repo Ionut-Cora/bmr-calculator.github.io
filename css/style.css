@@ -21,7 +21,7 @@
           align-items: center;
   min-height: 100vh;
   position: relative;
-  background-image: url(../images/bmr.jpg);
+  background-image: url(/images/bmr.jpg);
 }
 
 #root #all-content {
@@ -51,6 +51,7 @@
   min-width: 50vw;
   padding: 1rem;
   margin: 2rem;
+  border-radius: 10px 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -115,6 +116,7 @@
   text-transform: uppercase;
   width: 10rem;
   height: 3rem;
+  border-radius: 10px 25px;
 }
 
 #root #all-content #all-card form #submit:hover {
