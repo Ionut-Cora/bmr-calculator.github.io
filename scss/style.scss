@@ -6,7 +6,7 @@
     @include flexCenter;
     min-height: 100vh;
     position: relative;
-    background-image: url(/images/bmr.jpg);
+    background-color: $fourth-color;
 
     #all-content {
 
@@ -23,12 +23,15 @@
             padding: 1rem;
             margin: 2rem;
             border-radius: 10px 50px;
+            box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 
             @include flexCenter;
             
             h1 {
                 font-size: 1.5rem;
                 margin: 1rem;
+                color: $secondary-color;
+                text-shadow: 1px 1px rgba(14, 30, 37, 0.32);
             }
         
             form {
@@ -43,6 +46,8 @@
                     padding-left: 5px;
                     color: $third-color;
                     font-size: 1rem;
+                    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+                    outline: 0;
 
                     &:hover {
                         background-color: darken($secondary-color, 5%);
@@ -59,15 +64,18 @@
     
                 #submit {
                     padding-left: 0;
-                    background-color: $fourth-color;
+                    background-color: $fifth-color;
                     font-weight: bold;
                     text-transform: uppercase;
                     width: 10rem;
                     height: 3rem;
                     border-radius: 10px 25px;
+                    color: $secondary-color;
+                    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+                    text-shadow: 1px 1px rgba(14, 30, 37, 0.32);
 
                     &:hover {
-                        background: darken($fourth-color, 3%);
+                        background: darken($fifth-color, 3%);
                         cursor: pointer;
                     }
 
@@ -93,6 +101,7 @@
                 background-color: $secondary-color;
                 width: 50%;
                 padding: 1rem;
+                box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 
                 #bmr-card {
                     @include flexCenter;
