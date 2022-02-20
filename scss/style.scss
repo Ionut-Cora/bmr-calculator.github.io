@@ -22,7 +22,7 @@
             min-width: 50vw;
             padding: 1rem;
             margin: 2rem;
-            border-radius: 10px 50px;
+            // border-radius: 10px 50px;
             box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 
             @include flexCenter;
@@ -69,7 +69,7 @@
                     text-transform: uppercase;
                     width: 10rem;
                     height: 3rem;
-                    border-radius: 10px 25px;
+                    // border-radius: 10px 25px;
                     color: $secondary-color;
                     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
                     text-shadow: 1px 1px rgba(14, 30, 37, 0.32);
@@ -91,6 +91,8 @@
                 .age-message {
                     display: none;
                     color: $error-color;
+                    text-transform: uppercase;
+                    font-weight: bold
                 }
             }
 

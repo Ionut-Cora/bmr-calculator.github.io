@@ -21,7 +21,7 @@
           align-items: center;
   min-height: 100vh;
   position: relative;
-  background-color: #ffb603;
+  background-color: #E9C46A;
 }
 
 #root #all-content {
@@ -46,12 +46,11 @@
 }
 
 #root #all-content #all-card {
-  background-color: #00B470;
+  background-color: #2A9D8F;
   min-height: 50vh;
   min-width: 50vw;
   padding: 1rem;
   margin: 2rem;
-  border-radius: 10px 50px;
   -webkit-box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
           box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
   display: -webkit-box;
@@ -118,12 +117,11 @@
 
 #root #all-content #all-card form #submit {
   padding-left: 0;
-  background-color: #00CBFF;
+  background-color: #E76F51;
   font-weight: bold;
   text-transform: uppercase;
   width: 10rem;
   height: 3rem;
-  border-radius: 10px 25px;
   color: #fff;
   -webkit-box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
           box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
@@ -131,7 +129,7 @@
 }
 
 #root #all-content #all-card form #submit:hover {
-  background: #00bff0;
+  background: #e56444;
   cursor: pointer;
 }
 
@@ -146,7 +144,9 @@
 #root #all-content #all-card form .height-message,
 #root #all-content #all-card form .age-message {
   display: none;
-  color: #ff0033;
+  color: #AE2012;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 #root #all-content #all-card #result {
