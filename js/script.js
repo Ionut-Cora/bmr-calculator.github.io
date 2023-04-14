@@ -1,5 +1,4 @@
 
-
 const root = document.getElementById('root');
 
 window.addEventListener('load', () => {
@@ -8,27 +7,39 @@ window.addEventListener('load', () => {
             <div id="all-card">
                 <h1>BMR Calculator</h1>
                 <form>
-                    <input type="number" name="weight" id="weight" placeholder="Weight (kg)">
-                    <p class="weight-message">Please insert your weight !</p>
+                    <div>                  
+                        <label for="weight">Weight (kg)</label>
+                        <input type="number" name="weight" id="weight" placeholder="Ex: 75">
+                    </div>
 
-                    <input type="number" name="height" id="height" placeholder="Height (cm)">
-                    <p class="height-message">Please insert your height !</p>
+                    <div>
+                        <label for="weight">Height (cm)</label>
+                        <input type="number" name="height" id="height" placeholder="Ex: 175">         
+                    </div>
 
-                    <input type="number" name="age" id="age" placeholder="Age">
-                    <p class="age-message">Please insert your age !</p>
+                    <div>
+                        <label for="weight">Age</label>
+                        <input type="number" name="age" id="age" placeholder="Ex: 30">           
+                    </div>
 
-                    <select name="genders" id="genders">
-                        <option value="Men">Men</option>
-                        <option value="Women">Women</option>
-                    </select>
+                    <div>
+                        <label for="weight">Gender</label>
+                        <select name="genders" id="genders">
+                            <option value="Men">Men</option>
+                            <option value="Women">Women</option>
+                        </select>                   
+                    </div>
 
-                    <select name="activities" id="activities">
-                        <option value="Sedentary">Sedentary</option>
-                        <option value="Lightly active">Lightly active</option>
-                        <option value="Moderately active">Moderately active</option>
-                        <option value="Very active">Very active</option>
-                        <option value="Extra active">Extra active</option>
-                    </select>
+                    <div>
+                        <label for="weight">Activity level</label>
+                        <select name="activities" id="activities">
+                            <option value="Sedentary">Sedentary</option>
+                            <option value="Lightly active">Lightly active</option>
+                            <option value="Moderately active">Moderately active</option>
+                            <option value="Very active">Very active</option>
+                            <option value="Extra active">Extra active</option>
+                        </select>                  
+                    </div>
                     <input type="submit" id="submit" value="Calculate">
                 </form>
 
@@ -60,10 +71,6 @@ window.addEventListener('load', () => {
     const bmrDiv = document.getElementById('bmr-div');
     const activityDiv = document.getElementById('activity-div');
 
-    const weightMessage = document.querySelector('.weight-message');
-    const heightMessage = document.querySelector('.height-message');
-    const ageMessage = document.querySelector('.age-message');
-
     submitBtn.addEventListener('click', (event) => {
         event.preventDefault();
 
@@ -73,8 +80,7 @@ window.addEventListener('load', () => {
                 let gender = genders[i];
     
                 if (gender.selected === true) {
-                    if (gender.value === 'Men') {
-                        
+                    if (gender.value === 'Men') {                       
     
                         const bmrMen = (10 * weight.value) + (6.25 * height.value) - (5 * age.value) + 5;
     
@@ -151,21 +157,21 @@ window.addEventListener('load', () => {
         }
 
         if (weight.value === '') {
-            weightMessage.style.display = 'block';
+            weight.classList.add('error-class');
         } else {
-            weightMessage.style.display = 'none';
+            weight.classList.remove('error-class');
         }
 
         if (height.value === '') {
-            heightMessage.style.display = 'block';
+            height.classList.add('error-class');
         } else {
-            heightMessage.style.display = 'none';
+            height.classList.remove('error-class');
         }
 
         if (age.value === '') {
-            ageMessage.style.display = 'block';
+            age.classList.add('error-class');
         } else {
-            ageMessage.style.display = 'none';
+            age.classList.remove('error-class');
         }
 
     });

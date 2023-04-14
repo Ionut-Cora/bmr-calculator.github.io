@@ -92,7 +92,21 @@
   width: 100%;
 }
 
-#root #all-content #all-card form input, #root #all-content #all-card form select {
+#root #all-content #all-card form div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#root #all-content #all-card form div input, #root #all-content #all-card form div select {
   width: 50%;
   height: 2rem;
   border: 0;
@@ -100,19 +114,34 @@
   padding-left: 5px;
   color: #000;
   font-size: 1rem;
-  -webkit-box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-          box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   outline: 0;
 }
 
-#root #all-content #all-card form input:hover, #root #all-content #all-card form select:hover {
+#root #all-content #all-card form div input:hover, #root #all-content #all-card form div select:hover {
   background-color: #f2f2f2;
 }
 
 @media (max-width: 1050px) {
-  #root #all-content #all-card form input, #root #all-content #all-card form select {
+  #root #all-content #all-card form div input, #root #all-content #all-card form div select {
     min-width: 50vw;
   }
+}
+
+#root #all-content #all-card form div .error-class {
+  border: 1px solid red;
+  -webkit-box-shadow: 0 .1rem 1rem red;
+          box-shadow: 0 .1rem 1rem red;
+}
+
+#root #all-content #all-card form div .weight-message,
+#root #all-content #all-card form div .height-message,
+#root #all-content #all-card form div .age-message {
+  display: none;
+  color: #AE2012;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 #root #all-content #all-card form #submit {
@@ -138,15 +167,6 @@
     min-width: 10rem;
     height: 3rem;
   }
-}
-
-#root #all-content #all-card form .weight-message,
-#root #all-content #all-card form .height-message,
-#root #all-content #all-card form .age-message {
-  display: none;
-  color: #AE2012;
-  text-transform: uppercase;
-  font-weight: bold;
 }
 
 #root #all-content #all-card #result {
