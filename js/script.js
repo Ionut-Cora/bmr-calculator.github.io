@@ -1,5 +1,7 @@
 
 const root = document.getElementById('root');
+const date = new Date();
+const year = date.getFullYear();
 
 window.addEventListener('load', () => {
     root.innerHTML += `
@@ -24,26 +26,30 @@ window.addEventListener('load', () => {
 
                     <div>
                         <label for="weight">Gender</label>
-                        <select name="genders" id="genders">
-                            <option value="Men">Men</option>
-                            <option value="Women">Women</option>
-                        </select>                   
+                        <div class="select-wrapper">
+                            <select name="genders" id="genders">
+                                <option value="Men">Men</option>
+                                <option value="Women">Women</option>
+                            </select>                      
+                        </div>
                     </div>
 
                     <div>
                         <label for="weight">Activity level</label>
-                        <select name="activities" id="activities">
-                            <option value="Sedentary">Sedentary</option>
-                            <option value="Lightly active">Lightly active</option>
-                            <option value="Moderately active">Moderately active</option>
-                            <option value="Very active">Very active</option>
-                            <option value="Extra active">Extra active</option>
-                        </select>                  
+                        <div class="select-wrapper">
+                            <select name="activities" id="activities">
+                                <option value="Sedentary">Sedentary</option>
+                                <option value="Lightly active">Lightly active</option>
+                                <option value="Moderately active">Moderately active</option>
+                                <option value="Very active">Very active</option>
+                                <option value="Extra active">Extra active</option>
+                            </select>                       
+                        </div>
                     </div>
                     <input type="submit" id="submit" value="Calculate">
                 </form>
 
-                <div id="result">
+                <div class="result" id="result">
                     <div id="bmr-card">
                         <p>BMR: </p>
                         <div id="bmr-div"></div>       
@@ -58,7 +64,7 @@ window.addEventListener('load', () => {
         </div>
 
         <footer>
-            <p>&copy; made by Ionut Cora, 2021</p>
+            <p>Copyright &copy; 2021 - ` + year + ` Made by Ionut Cora, All rights reserved</p>
         </footer>
     `;
 
@@ -70,6 +76,7 @@ window.addEventListener('load', () => {
     const submitBtn =  document.getElementById('submit');
     const bmrDiv = document.getElementById('bmr-div');
     const activityDiv = document.getElementById('activity-div');
+    const resultsDiv = document.getElementById('result');
 
     submitBtn.addEventListener('click', (event) => {
         event.preventDefault();
@@ -113,8 +120,7 @@ window.addEventListener('load', () => {
                                 }
                             }
                         }
-                    } else if (gender.value === 'Women') {
-                        
+                    } else if (gender.value === 'Women') {                      
     
                         const bmrWomen = (10 * weight.value) + (6.25 * height.value) - (5 * age.value) - 161;
     
@@ -151,9 +157,12 @@ window.addEventListener('load', () => {
                 }
             }
 
+            resultsDiv.classList.add('green-class');
+
         } else {
             bmrDiv.innerHTML = ``;
             activityDiv.innerHTML = ``;
+            resultsDiv.classList.remove('green-class');
         }
 
         if (weight.value === '') {
@@ -173,7 +182,5 @@ window.addEventListener('load', () => {
         } else {
             age.classList.remove('error-class');
         }
-
     });
-
 });

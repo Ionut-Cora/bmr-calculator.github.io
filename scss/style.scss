@@ -9,12 +9,15 @@
     background-color: $fourth-color;
 
     #all-content {
-
         @include flexCenter;
         flex-direction: row;
         justify-content: space-around;
         min-width: 80%;
+        padding-bottom: 3rem;
         
+        @include large {
+            flex-direction: column;          
+        }
 
         #all-card {
             background-color: $primary-color;
@@ -22,16 +25,32 @@
             min-width: 50vw;
             padding: 1rem;
             margin: 2rem;
-            // border-radius: 10px 50px;
-            box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+            box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+
+            @include large {
+                margin: 2rem;
+                min-width: 75vw;
+            }
+
+            @include small {
+                margin: 2rem auto;
+                width: 90vw;
+            }
 
             @include flexCenter;
             
             h1 {
-                font-size: 1.5rem;
-                margin: 1rem;
+                font-size: 2.5rem;
+                margin: 1rem auto 2rem;
                 color: $secondary-color;
-                text-shadow: 1px 1px rgba(14, 30, 37, 0.32);
+
+                @include large {
+                    font-size: 2rem;
+                }
+
+                @include small {
+                    font-size: 1.5rem;
+                }
             }
         
             form {
@@ -43,35 +62,63 @@
                     display: flex;
                     flex-direction: column;
                     align-items: center;
+                    margin: 0.4rem auto;
+
+                    label {
+                        text-transform: uppercase;
+                        color: $third-color;
+                    }
 
                     input {
                         width: 50%;
-                        height: 2rem;
+                        height: 2.5rem;
                         border: 0;
                         margin: 0.5rem;
-                        padding-left: 5px;
+                        padding-left: 1rem;
+                        padding-right: 1rem;
                         color: $third-color;
                         font-size: 1rem;
-                        // box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
                         box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
                         outline: 0;
     
                         &:hover {
                             background-color: darken($secondary-color, 5%);
                         }
-    
-                        @include mobile {
-                            min-width: 50vw;
+
+                        @include extra-large {
+                            width: 90%;
                         }
                     }
 
                     .error-class {
-                        border: 1px solid red;
-                        box-shadow: 0 .1rem 1rem red;
+                        border: 1px solid $error-color;
+                        box-shadow: 0 .1rem 1rem $error-color;
                     }
         
-                    select {
-                        @extend input;
+                    .select-wrapper {
+                        position: relative;
+                        width: 50%;
+
+                        @include extra-large {
+                            width: 90%;
+                        }
+
+                        &::after {
+                            content: "▼";
+                            font-size: 0.7rem;
+                            top: 23px;
+                            right: 1rem;
+                            position: absolute;
+                            color: $third-color;
+                        }
+
+                        select {
+                            @extend input;
+    
+                            width: 100%;
+                            -webkit-appearance: none;
+                            appearance: none;
+                        }
                     }
     
                     .weight-message,
@@ -85,38 +132,38 @@
                 }
 
                 #submit {
-                    padding-left: 0;
                     background-color: $fifth-color;
                     font-weight: bold;
                     text-transform: uppercase;
+                    border: none;
                     width: 10rem;
                     height: 3rem;
-                    // border-radius: 10px 25px;
                     color: $secondary-color;
-                    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-                    text-shadow: 1px 1px rgba(14, 30, 37, 0.32);
+                    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+                    margin: 1rem auto;
 
                     &:hover {
                         background: darken($fifth-color, 3%);
                         cursor: pointer;
                     }
 
-                    @include mobile {
+                    @include large {
                         min-width: 10rem;
                         height: 3rem;
                     }
-
                 }
             }
 
             #result {
-
                 @include flexCenter;
                 margin: 1.5rem 0;
                 background-color: $secondary-color;
                 width: 50%;
                 padding: 1rem;
-                box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+
+                @include extra-large {
+                    width: 90%;
+                }
 
                 #bmr-card {
                     @include flexCenter;
@@ -138,34 +185,27 @@
                         font-weight: bold;
                     }
                 }
-
-                @include mobile {
-                    min-width: 50vw;
-                }
-
             }
-        
 
-            @include mobile {
-                margin: 2rem;
-                min-width: 75vw;
+            .result {
+                box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
             }
-    
-        }
 
-        @include mobile {
-            flex-direction: column;
-            padding-bottom: 3rem;
+            .green-class {
+                border: 1px solid green;
+                box-shadow: 0 .1rem 1rem green;
+            }
         }
-
     }
-
     
     footer {
         position: absolute;
         bottom: 0;
         width: 100%;
-        height: 2.5rem;
+        height: 3rem;
         text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }

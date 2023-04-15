@@ -1,11 +1,13 @@
-// $primary-color: #00B470;
-$primary-color: #2A9D8F;
-$secondary-color: #fff;
-$third-color: #000;
-// $fourth-color: #ffb603;
-$fourth-color: #E9C46A;
-// $fifth-color: #00CBFF;
+
+// Colors
+$primary-color: #ABC270;
+$secondary-color: #FFFFFF;
+$third-color: rgb(33,37,41);
+$fourth-color: #F8FDEE;
 $fifth-color: #E76F51;
-// $error-color: #ff0033;
-$error-color: #AE2012;
-$mobile: 1050px;
+$error-color: #d93025;
+
+// Breakpoints
+$small: 576px;
+$large: 992px;
+$extra-large: 1200px;

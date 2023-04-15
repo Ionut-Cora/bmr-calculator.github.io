@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -21,7 +22,7 @@
           align-items: center;
   min-height: 100vh;
   position: relative;
-  background-color: #E9C46A;
+  background-color: #F8FDEE;
 }
 
 #root #all-content {
@@ -43,16 +44,26 @@
   -ms-flex-pack: distribute;
       justify-content: space-around;
   min-width: 80%;
+  padding-bottom: 3rem;
+}
+
+@media (max-width: 992px) {
+  #root #all-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 #root #all-content #all-card {
-  background-color: #2A9D8F;
+  background-color: #ABC270;
   min-height: 50vh;
   min-width: 50vw;
   padding: 1rem;
   margin: 2rem;
-  -webkit-box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-          box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -68,11 +79,36 @@
           align-items: center;
 }
 
+@media (max-width: 992px) {
+  #root #all-content #all-card {
+    margin: 2rem;
+    min-width: 75vw;
+  }
+}
+
+@media (max-width: 576px) {
+  #root #all-content #all-card {
+    margin: 2rem auto;
+    width: 90vw;
+  }
+}
+
 #root #all-content #all-card h1 {
-  font-size: 1.5rem;
-  margin: 1rem;
-  color: #fff;
-  text-shadow: 1px 1px rgba(14, 30, 37, 0.32);
+  font-size: 2.5rem;
+  margin: 1rem auto 2rem;
+  color: #FFFFFF;
+}
+
+@media (max-width: 992px) {
+  #root #all-content #all-card h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  #root #all-content #all-card h1 {
+    font-size: 1.5rem;
+  }
 }
 
 #root #all-content #all-card form {
@@ -104,57 +140,91 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0.4rem auto;
 }
 
-#root #all-content #all-card form div input, #root #all-content #all-card form div select {
+#root #all-content #all-card form div label {
+  text-transform: uppercase;
+  color: #212529;
+}
+
+#root #all-content #all-card form div input, #root #all-content #all-card form div .select-wrapper select {
   width: 50%;
-  height: 2rem;
+  height: 2.5rem;
   border: 0;
   margin: 0.5rem;
-  padding-left: 5px;
-  color: #000;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: #212529;
   font-size: 1rem;
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   outline: 0;
 }
 
-#root #all-content #all-card form div input:hover, #root #all-content #all-card form div select:hover {
+#root #all-content #all-card form div input:hover, #root #all-content #all-card form div .select-wrapper select:hover {
   background-color: #f2f2f2;
 }
 
-@media (max-width: 1050px) {
-  #root #all-content #all-card form div input, #root #all-content #all-card form div select {
-    min-width: 50vw;
+@media (max-width: 1200px) {
+  #root #all-content #all-card form div input, #root #all-content #all-card form div .select-wrapper select {
+    width: 90%;
   }
 }
 
 #root #all-content #all-card form div .error-class {
-  border: 1px solid red;
-  -webkit-box-shadow: 0 .1rem 1rem red;
-          box-shadow: 0 .1rem 1rem red;
+  border: 1px solid #d93025;
+  -webkit-box-shadow: 0 0.1rem 1rem #d93025;
+          box-shadow: 0 0.1rem 1rem #d93025;
+}
+
+#root #all-content #all-card form div .select-wrapper {
+  position: relative;
+  width: 50%;
+}
+
+@media (max-width: 1200px) {
+  #root #all-content #all-card form div .select-wrapper {
+    width: 90%;
+  }
+}
+
+#root #all-content #all-card form div .select-wrapper::after {
+  content: "▼";
+  font-size: 0.7rem;
+  top: 23px;
+  right: 1rem;
+  position: absolute;
+  color: #212529;
+}
+
+#root #all-content #all-card form div .select-wrapper select {
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
 }
 
 #root #all-content #all-card form div .weight-message,
 #root #all-content #all-card form div .height-message,
 #root #all-content #all-card form div .age-message {
   display: none;
-  color: #AE2012;
+  color: #d93025;
   text-transform: uppercase;
   font-weight: bold;
 }
 
 #root #all-content #all-card form #submit {
-  padding-left: 0;
   background-color: #E76F51;
   font-weight: bold;
   text-transform: uppercase;
+  border: none;
   width: 10rem;
   height: 3rem;
-  color: #fff;
-  -webkit-box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-          box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-  text-shadow: 1px 1px rgba(14, 30, 37, 0.32);
+  color: #FFFFFF;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  margin: 1rem auto;
 }
 
 #root #all-content #all-card form #submit:hover {
@@ -162,7 +232,7 @@
   cursor: pointer;
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 992px) {
   #root #all-content #all-card form #submit {
     min-width: 10rem;
     height: 3rem;
@@ -184,11 +254,15 @@
       -ms-flex-align: center;
           align-items: center;
   margin: 1.5rem 0;
-  background-color: #fff;
+  background-color: #FFFFFF;
   width: 50%;
   padding: 1rem;
-  -webkit-box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-          box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+@media (max-width: 1200px) {
+  #root #all-content #all-card #result {
+    width: 90%;
+  }
 }
 
 #root #all-content #all-card #result #bmr-card, #root #all-content #all-card #result #activity-card {
@@ -223,34 +297,31 @@
   font-weight: bold;
 }
 
-@media (max-width: 1050px) {
-  #root #all-content #all-card #result {
-    min-width: 50vw;
-  }
+#root #all-content #all-card .result {
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 
-@media (max-width: 1050px) {
-  #root #all-content #all-card {
-    margin: 2rem;
-    min-width: 75vw;
-  }
-}
-
-@media (max-width: 1050px) {
-  #root #all-content {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding-bottom: 3rem;
-  }
+#root #all-content #all-card .green-class {
+  border: 1px solid green;
+  -webkit-box-shadow: 0 .1rem 1rem green;
+          box-shadow: 0 .1rem 1rem green;
 }
 
 #root footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 2.5rem;
+  height: 3rem;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 /*# sourceMappingURL=style.css.map */
