@@ -92,7 +92,11 @@
 
                     .error-class {
                         border: 1px solid $error-color;
-                        box-shadow: 0 .1rem 1rem red;
+                        box-shadow: 0 .1rem 1rem $error-color;
+                        -webkit-box-shadow: 0 .1rem 1rem $error-color; 
+                        -moz-box-shadow: 0 .1rem 1rem $error-color;
+                        appearance: none;
+                        -webkit-appearance: none;
                     }
         
                     .select-wrapper {
