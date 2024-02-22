@@ -9,31 +9,31 @@ window.addEventListener('load', () => {
             <div id="all-card">
                 <h1>BMR Calculator</h1>
                 <form>
-                    <div>                  
-                        <label for="weight">Weight (kg)</label>
-                        <input type="number" name="weight" id="weight" placeholder="Ex: 75">
-                    </div>
-
-                    <div>
-                        <label for="weight">Height (cm)</label>
-                        <input type="number" name="height" id="height" placeholder="Ex: 175">         
-                    </div>
-
-                    <div>
-                        <label for="weight">Age</label>
-                        <input type="number" name="age" id="age" placeholder="Ex: 30">           
-                    </div>
-
-                    <div>
-                        <label for="weight">Gender</label>
-                        <div class="select-wrapper">
-                            <select name="genders" id="genders">
-                                <option value="Men">Men</option>
-                                <option value="Women">Women</option>
-                            </select>                      
+                    <div class="form-col">
+                        <div>                  
+                            <label for="weight">Weight (kg)</label>
+                            <input type="number" name="weight" id="weight" placeholder="Ex: 75">
+                        </div>
+                        <div>
+                            <label for="weight">Height (cm)</label>
+                            <input type="number" name="height" id="height" placeholder="Ex: 175">         
                         </div>
                     </div>
-
+                    <div class="form-col">
+                        <div>
+                            <label for="weight">Age</label>
+                            <input type="number" name="age" id="age" placeholder="Ex: 30">           
+                        </div>
+                        <div>
+                            <label for="weight">Gender</label>
+                            <div class="select-wrapper">
+                                <select name="genders" id="genders">
+                                    <option value="Men">Men</option>
+                                    <option value="Women">Women</option>
+                                </select>                      
+                            </div>
+                        </div>
+                    </div>
                     <div>
                         <label for="weight">Activity level</label>
                         <div class="select-wrapper">
