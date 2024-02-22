@@ -140,8 +140,8 @@
 
                 #submit {
                     background-color: $fifth-color;
-                    font-weight: bold;
-                    text-transform: uppercase;
+                    font-weight: 500;
+                    font-size: 1.3rem;
                     border: none;
                     width: 10rem;
                     height: 3rem;
@@ -157,6 +157,10 @@
                     @include large {
                         min-width: 10rem;
                         height: 3rem;
+                    }
+
+                    @include small {
+                        font-size: 1rem;
                     }
                 }
             }

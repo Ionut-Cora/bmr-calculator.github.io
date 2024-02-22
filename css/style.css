@@ -152,8 +152,8 @@ body {
 }
 #root #all-content #all-card form #submit {
   background-color: #2B3499;
-  font-weight: bold;
-  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.3rem;
   border: none;
   width: 10rem;
   height: 3rem;
@@ -169,6 +169,11 @@ body {
   #root #all-content #all-card form #submit {
     min-width: 10rem;
     height: 3rem;
+  }
+}
+@media (max-width: 576px) {
+  #root #all-content #all-card form #submit {
+    font-size: 1rem;
   }
 }
 #root #all-content #all-card #result {
