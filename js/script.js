@@ -36,7 +36,7 @@ window.addEventListener('load', () => {
                     </div>
                     <div>
                         <label for="weight">Activity level</label>
-                        <div class="select-wrapper">
+                        <div class="select-wrapper activity-wrapper">
                             <select name="activities" id="activities">
                                 <option value="Sedentary">Sedentary</option>
                                 <option value="Lightly active">Lightly active</option>

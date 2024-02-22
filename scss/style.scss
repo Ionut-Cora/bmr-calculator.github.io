@@ -97,6 +97,10 @@
                         &:hover {
                             background-color: darken($secondary-color, 5%);
                         }
+
+                        @include small {
+                            width: 90%;
+                        }
                     }
 
                     .error-class {
@@ -121,12 +125,24 @@
                             color: $third-color;
                         }
 
+                        @include small {
+                            width: 90%;
+                        }
+
                         select {
                             @extend input;
     
                             width: 100%;
                             -webkit-appearance: none;
                             appearance: none;
+                        }
+                    }
+
+                    .activity-wrapper {
+                        width: 80%;
+
+                        @include extra-large {
+                            width: 90%;
                         }
                     }
     

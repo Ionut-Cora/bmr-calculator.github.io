@@ -117,6 +117,11 @@ body {
 #root #all-content #all-card form div input:hover, #root #all-content #all-card form div .select-wrapper select:hover {
   background-color: #f2f2f2;
 }
+@media (max-width: 576px) {
+  #root #all-content #all-card form div input, #root #all-content #all-card form div .select-wrapper select {
+    width: 90%;
+  }
+}
 #root #all-content #all-card form div .error-class {
   border: 1px solid #d93025;
   box-shadow: 0 0.1rem 1rem #d93025;
@@ -138,11 +143,24 @@ body {
   position: absolute;
   color: rgb(33, 37, 41);
 }
+@media (max-width: 576px) {
+  #root #all-content #all-card form div .select-wrapper {
+    width: 90%;
+  }
+}
 #root #all-content #all-card form div .select-wrapper select {
   width: 100%;
   -webkit-appearance: none;
   -moz-appearance: none;
        appearance: none;
+}
+#root #all-content #all-card form div .activity-wrapper {
+  width: 80%;
+}
+@media (max-width: 1200px) {
+  #root #all-content #all-card form div .activity-wrapper {
+    width: 90%;
+  }
 }
 #root #all-content #all-card form div .weight-message,
 #root #all-content #all-card form div .height-message,
