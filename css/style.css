@@ -124,9 +124,9 @@ body {
 }
 #root #all-content #all-card form div .error-class {
   border: 1px solid #d93025;
-  box-shadow: 0 0.1rem 1rem #d93025;
-  -webkit-box-shadow: 0 0.1rem 1rem #d93025;
-  -moz-box-shadow: 0 0.1rem 1rem #d93025;
+  box-shadow: inset 0 0.2rem 0.7rem #d93025;
+  -webkit-box-shadow: inset 0 0.2rem 0.7rem #d93025;
+  -moz-box-shadow: inset 0 0.2rem 0.7rem #d93025;
   -moz-appearance: none;
        appearance: none;
   -webkit-appearance: none;
