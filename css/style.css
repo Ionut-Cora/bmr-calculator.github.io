@@ -12,7 +12,7 @@
   align-items: center;
   min-height: 100vh;
   position: relative;
-  background-color: #F8FDEE;
+  background-color: #FFD099;
 }
 #root #all-content {
   display: flex;
@@ -30,7 +30,7 @@
   }
 }
 #root #all-content #all-card {
-  background-color: #ABC270;
+  background-color: #FF6C22;
   min-height: 50vh;
   min-width: 50vw;
   padding: 1rem;
@@ -93,7 +93,7 @@
 }
 #root #all-content #all-card form div label {
   text-transform: uppercase;
-  color: rgb(33, 37, 41);
+  color: white;
 }
 #root #all-content #all-card form div input, #root #all-content #all-card form div .select-wrapper select {
   height: 2.5rem;
@@ -145,7 +145,7 @@
   font-weight: bold;
 }
 #root #all-content #all-card form #submit {
-  background-color: #E76F51;
+  background-color: #2B3499;
   font-weight: bold;
   text-transform: uppercase;
   border: none;
@@ -156,7 +156,7 @@
   margin: 2rem auto 0.5rem;
 }
 #root #all-content #all-card form #submit:hover {
-  background: #e56444;
+  background: #28308d;
   cursor: pointer;
 }
 @media (max-width: 992px) {
