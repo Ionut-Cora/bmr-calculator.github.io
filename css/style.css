@@ -40,6 +40,7 @@ body {
   padding: 1rem;
   margin: 2rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -111,6 +112,7 @@ body {
   font-size: 1rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   outline: 0;
+  border-radius: 5px;
 }
 #root #all-content #all-card form div input:hover, #root #all-content #all-card form div .select-wrapper select:hover {
   background-color: #f2f2f2;
@@ -160,6 +162,7 @@ body {
   color: #FFFFFF;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   margin: 2rem auto 0.5rem;
+  border-radius: 5px;
 }
 #root #all-content #all-card form #submit:hover {
   background: #28308d;
@@ -185,6 +188,7 @@ body {
   background-color: #FFFFFF;
   width: 50%;
   padding: 1rem;
+  border-radius: 5px;
 }
 @media (max-width: 1200px) {
   #root #all-content #all-card #result {
