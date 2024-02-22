@@ -74,9 +74,11 @@
                     margin: 0.2rem auto;
 
                     label {
-                        text-transform: uppercase;
-                        // color: $third-color;
-                        color: white;
+                        color: $secondary-color;
+
+                        span {
+                            text-transform: uppercase;
+                        }
                     }
 
                     input {

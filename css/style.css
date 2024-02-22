@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
 #root {
   display: flex;
   flex-direction: column;
@@ -92,8 +96,10 @@
   margin: 0.2rem auto;
 }
 #root #all-content #all-card form div label {
+  color: #FFFFFF;
+}
+#root #all-content #all-card form div label span {
   text-transform: uppercase;
-  color: white;
 }
 #root #all-content #all-card form div input, #root #all-content #all-card form div .select-wrapper select {
   height: 2.5rem;

@@ -11,18 +11,18 @@ window.addEventListener('load', () => {
                 <form>
                     <div class="form-col">
                         <div>                  
-                            <label for="weight">Weight (kg)</label>
-                            <input type="number" name="weight" id="weight" placeholder="Ex: 75">
+                            <label for="weight">Weight <span>(kg)</span></label>
+                            <input type="number" name="weight" id="weight" placeholder="75">
                         </div>
                         <div>
-                            <label for="weight">Height (cm)</label>
-                            <input type="number" name="height" id="height" placeholder="Ex: 175">         
+                            <label for="weight">Height <span>(cm)</span></label>
+                            <input type="number" name="height" id="height" placeholder="175">         
                         </div>
                     </div>
                     <div class="form-col">
                         <div>
                             <label for="weight">Age</label>
-                            <input type="number" name="age" id="age" placeholder="Ex: 30">           
+                            <input type="number" name="age" id="age" placeholder="30">           
                         </div>
                         <div>
                             <label for="weight">Gender</label>
