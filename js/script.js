@@ -64,7 +64,7 @@ window.addEventListener('load', () => {
         </div>
 
         <footer>
-            <p>Copyright &copy; 2021 - ` + year + ` Made by Ionut Cora, All rights reserved</p>
+            <p>Copyright &copy; 2021 - ` + year + ` Made by Ionut Cora | All Rights Reserved</p>
         </footer>
     `;
 
